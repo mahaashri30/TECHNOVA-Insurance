@@ -1,0 +1,65 @@
+[
+  {
+    "plan_id": 1,
+    "plan_name": "Health Secure Basic",
+    "plan_type": "Health",
+    "coverage": 500000,
+    "premium": 4000,
+    "age_limit": "18-60",
+    "features": [
+      "Hospitalization",
+      "Ambulance",
+      "Daycare"
+    ]
+  },
+  {
+    "plan_id": 2,
+    "plan_name": "Health Secure Plus",
+    "plan_type": "Health",
+    "coverage": 1000000,
+    "premium": 7000,
+    "age_limit": "18-65",
+    "features": [
+      "Critical Illness",
+      "Cashless",
+      "Ambulance"
+    ]
+  },
+  {
+    "plan_id": 3,
+    "plan_name": "Life Protect",
+    "plan_type": "Life",
+    "coverage": 2000000,
+    "premium": 5000,
+    "age_limit": "18-70",
+    "features": [
+      "Term Life",
+      "Tax Benefits"
+    ]
+  },
+  {
+    "plan_id": 4,
+    "plan_name": "Life Shield Premium",
+    "plan_type": "Life",
+    "coverage": 5000000,
+    "premium": 12000,
+    "age_limit": "18-75",
+    "features": [
+      "Whole Life",
+      "Loan Facility"
+    ]
+  },
+  {
+    "plan_id": 5,
+    "plan_name": "Vehicle Care",
+    "plan_type": "Vehicle",
+    "coverage": 300000,
+    "premium": 3000,
+    "age_limit": "18-65",
+    "features": [
+      "Own Damage",
+      "Third Party",
+      "Roadside Assistance"
+    ]
+  }
+]

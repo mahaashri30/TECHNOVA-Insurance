@@ -1,0 +1,6 @@
+plan_id,plan_name,plan_type,coverage,premium,age_limit,features
+1,Health Secure Basic,Health,500000,4000,18-60,"Hospitalization, Ambulance, Daycare"
+2,Health Secure Plus,Health,1000000,7000,18-65,"Critical Illness, Cashless, Ambulance"
+3,Life Protect,Life,2000000,5000,18-70,"Term Life, Tax Benefits"
+4,Life Shield Premium,Life,5000000,12000,18-75,"Whole Life, Loan Facility"
+5,Vehicle Care,Vehicle,300000,3000,18-65,"Own Damage, Third Party, Roadside Assistance"

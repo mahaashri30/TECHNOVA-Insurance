@@ -1,20 +1,30 @@
-import openai
-import analyze_sentiment, get_sentiment_message
-from app.services.sentiment import analyze_sentiment, get_sentiment_message
+from textblob import TextBlob
 
-async def generate_response(query: str, user_profile: dict = None):
-    sentiment = analyze_sentiment(query)
-    sentiment_msg = get_sentiment_message(sentiment)
+def analyze_sentiment(text: str) -> str:
+    """
+    Analyze the sentiment of the given text and return:
+    - 'Positive' for positive sentiment
+    - 'Negative' for negative sentiment
+    - 'Neutral' for neutral sentiment
+    """
+    blob = TextBlob(text)
+    polarity = blob.sentiment.polarity  # Polarity score ranges from -1.0 to 1.0
 
-    context = f"User Profile: {user_profile}" if user_profile else ""
-    prompt = f"{context}\nUser sentiment: {sentiment}\n{sentiment_msg}\nAnswer this insurance query: {query}"
+    if polarity > 0.2:
+        return "Positive"
+    elif polarity < -0.2:
+        return "Negative"
+    else:
+        return "Neutral"
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[
-            {"role": "system", "content": "You are an empathetic insurance advisor."},
-            {"role": "user", "content": prompt}
-        ]
-    )
 
-    return response["choices"][0]["message"]["content"]
+def get_sentiment_message(sentiment: str) -> str:
+    """
+    Return an empathetic message based on the detected sentiment.
+    """
+    if sentiment == "Positive":
+        return "Great! I can help you explore more options."
+    elif sentiment == "Negative":
+        return "I understand your concern. Let me simplify this for you."
+    else:
+        return "Sure, let's look at your options together."

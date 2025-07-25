@@ -8,3 +8,4 @@ faiss-cpu
 scikit-learn
 numpy
 textblob
+pandas
